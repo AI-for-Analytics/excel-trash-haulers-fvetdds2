@@ -8,9 +8,15 @@ Start by simply asking Claude to explain the spreadsheet.
 
 1) Follow the steps below to find what % of complaints are not about missed trash pickups and then to find the top 10 non-missed pickup complaints by count.
 
-- Ask Claude how many complaints were not about missed trash pickups?  Record this answer. Ans: Non-Missed Pickup requests: 5198 out of 20,226
+- Ask Claude how many complaints were not about missed trash pickups?  Record this answer.
+  When asked "how many of non missed trash pickup" Ans: Trash - Curbside/Alley Missed Pickup:15,028 and Non-Missed Pickup requests: 5198 out of 20,226 (Trash- Backdoor:2,629, Trash Collection Complaint:2,312, Damage to Property:257). Claude used Request column to count.
 - If it was not already provided, ask for a top 10 non-missed pickup complaints by count.  Do you see any issues?
+
+  When asked Claude to list a top 10 non-missed pickup complaits by count, it used Description column for counting and separated count of Description contained Miss Missed, Miss, Missed. and Missed again separatedly. The Rank is not correct. Clude filtered only by the 
+  
 - If you noticed any isses with Claude's output, ask about it and have it correct the errors.
+  I asked claude to list a top 10 complaints by count in request type that is not not Curbside/Alley Missed Pickup.
+  
 - Repeat these 3 steps until you are satisfied.  It may take several iterations.
 - What is the final answer?
 - Which types of complaints did Claude miss?
