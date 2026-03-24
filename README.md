@@ -65,12 +65,15 @@ Rank	Complaint Theme	             Count	%
 
 - Ask Claude to create a new column between Description and Address name "Missed Pickup" and set the value in this column to TRUE or FALSE.
 - Get a % of missed pick ups using this new column and compare it to the value above?  Do they match?
-   missed pickup is 18,207 counts and 90.0%. It is not matched with the number Claude provided before adding Missed Pickup column.
+  Total missed pickup complaints is 18,207 counts, 90.0%. It is not matched with the number Claude provided before adding Missed Pickup column.
 
 3) Use the new column for further analysis.
 
 - Which Council District has the greatest number of TRUE values? Double-check Claude by using a pivot table.
+  Council DIstrict 25 has the greatest number of TRUE (1,156 reports), using a pivot table, council District 25 still has the greatest number of TRUE and the count no is matched.
 - Which Council District has the greatest percent of TRUE values?
+  Council DIstrict 25 has the greatest number of TRUE (93.5%)
+  
 - Did any Council Districts have 100% of their complaints due to missed trash pick ups?
 - Do the same with FALSE values.
 - Find which trash hauler has the greatest percent of their complaints due to missed trash pick ups?
