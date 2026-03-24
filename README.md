@@ -9,16 +9,19 @@ Start by simply asking Claude to explain the spreadsheet.
 1) Follow the steps below to find what % of complaints are not about missed trash pickups and then to find the top 10 non-missed pickup complaints by count.
 
 - Ask Claude how many complaints were not about missed trash pickups?  Record this answer.
+
   When asked "how many of non missed trash pickup" Ans: Trash - Curbside/Alley Missed Pickup:15,028 and Non-Missed Pickup requests: 5198 out of 20,226 (Trash- Backdoor:2,629, Trash Collection Complaint:2,312, Damage to Property:257). Claude used Request column to count.
 - If it was not already provided, ask for a top 10 non-missed pickup complaints by count.  Do you see any issues?
 
   When asked Claude to list a top 10 non-missed pickup complaits by count, it used Description column for counting and separated count of Description contained Miss Missed, Miss, Missed. and Missed again separatedly. The Rank is not correct. Clude filtered only by the description in request type: Curbside/Alley Missed Pickup. 
   
 - If you noticed any isses with Claude's output, ask about it and have it correct the errors.
+
   I asked claude to list a top 10 non-missed trash pickup complaints by count in request type that is not Curbside/Alley Missed Pickup, and count only description that are not contained miss.
   
 - Repeat these 3 steps until you are satisfied.  It may take several iterations.
 - What is the final answer?
+
   When excluded all miss descriptions, there are 2,487 complaints and only 2,186 unique descriptions.
   Rank
   1. 1 cart (count = 98)
@@ -28,6 +31,7 @@ Start by simply asking Claude to explain the spreadsheet.
   5. Backdoor pick up (count = 5)
   6. Backdoor (count = 5)
 - Which types of complaints did Claude miss?
+
   Since discription are free-text with inconsistent wording, therefore, many complaints mean the same thing but use different phrasing and if claude is not suggested to used common variations and synonyms to group them together by meaning. When Claude grouped complaints by meaning. The result of 2,487 non-missed complaints detected as below:
   Rank
   1. Truck/driver behavior (count = 522)
@@ -65,18 +69,28 @@ Rank	Complaint Theme	             Count	%
 
 - Ask Claude to create a new column between Description and Address name "Missed Pickup" and set the value in this column to TRUE or FALSE.
 - Get a % of missed pick ups using this new column and compare it to the value above?  Do they match?
+
   Total missed pickup complaints is 18,207 counts, 90.0%. It is not matched with the number Claude provided before adding Missed Pickup column.
 
 3) Use the new column for further analysis.
 
 - Which Council District has the greatest number of TRUE values? Double-check Claude by using a pivot table.
+
   Council DIstrict 25 has the greatest number of TRUE (1,156 reports), using a pivot table, council District 25 still has the greatest number of TRUE and the count no is matched.
 - Which Council District has the greatest percent of TRUE values?
-  Council DIstrict 25 has the greatest number of TRUE (93.5%)
+
+  Council District 32 and 31 had the greatest percent of TRUE (95.3%)
   
 - Did any Council Districts have 100% of their complaints due to missed trash pick ups?
+
+  Council District 35 and 10 had 100% missed trash pickup complaints.
+  
 - Do the same with FALSE values.
+
+  When using the Missed Pickup column, Council District 21 had the greatest non-missed complaints and accounted to 13% of total complaints from the district. However, District 5 had the greatest percent of FALSE (15.1%)
 - Find which trash hauler has the greatest percent of their complaints due to missed trash pick ups?
+
+  Red river had 13,163 missed-trash complaints or 91.4% of missed
 - Which address has had the greatest number of missed trash pick ups?
 
 4) Fines
